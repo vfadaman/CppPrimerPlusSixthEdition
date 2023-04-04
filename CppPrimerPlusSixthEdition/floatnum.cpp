@@ -1,0 +1,23 @@
+// floatnum.cpp -- 부동소수점형
+#include "stdafx.h"
+#include <iostream>
+
+int main()
+{
+	using namespace std;
+	cout.setf(ios_base::fixed, ios_base::floatfield); // 고정소수점 형식으로 출력
+
+	float tub = 10.0 / 3.0; // 유효숫자 6개
+	double mint = 10.0 / 3.0; // 유효숫자 15개
+	const float million = 1.0e6;
+
+	cout << "tub = " << tub;
+	cout << ", a million tubs = " << million * tub;
+	cout << ", \nten million tub = ";
+	cout << 10 * million * tub << endl;
+
+	cout << "mint = " << mint << "and a million mints = ";
+	cout << million * mint << endl;
+	cin.get();
+	return 0;
+}
